@@ -1,0 +1,19 @@
+[package]
+name = "zekoro"
+version = "1.0.0"
+description = "Zekoro desktop"
+edition = "2021"
+rust-version = "1.77"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"   # optimise for size; this is a thin wrapper
+panic = "abort"
+strip = true

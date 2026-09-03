@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Zekoro",
+  "version": "1.0.0",
+  "identifier": "one.zekoro.desktop",
+  "build": {
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Zekoro",
+        "url": "https://zekoro.one/",
+        "width": 1040,
+        "height": 720,
+        "minWidth": 380,
+        "minHeight": 500,
+        "resizable": true,
+        "center": true,
+        "backgroundColor": "#0b0d10"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["appimage", "deb", "nsis"],
+    "category": "SocialNetworking",
+    "shortDescription": "End-to-end encrypted messaging",
+    "longDescription": "Desktop wrapper for Zekoro, the end-to-end encrypted messenger at zekoro.one.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.png",
+      "icons/icon.ico"
+    ]
+  }
+}
